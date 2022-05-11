@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Nav from './sharedcomponents/Nav bar/Nav';
+import Home from './pages/Home/Home';
 
 
 
@@ -12,9 +13,9 @@ function App() {
 
     <div  className="App">
       <Nav></Nav>
-      {/* <Routes>
-
-      </Routes> */}
+      <Routes>
+        <Route path='/' element={<Home></Home>} ></Route>
+      </Routes>
     </div>
   );
 }
