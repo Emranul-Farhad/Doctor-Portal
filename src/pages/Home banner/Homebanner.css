@@ -1,0 +1,14 @@
+.bannerimage{
+   background-image: url('../../Images/images/bg.png');
+   background-repeat: no-repeat;
+   min-height: 100vh;
+   min-width: 100%;
+   background-position: cover;
+}
+
+.chair{
+    offset: 1px;
+    box-shadow: -2px 3px 13px gray;
+    
+    
+}
