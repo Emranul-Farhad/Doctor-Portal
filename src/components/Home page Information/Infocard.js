@@ -1,17 +1,18 @@
 import React from 'react';
+import './Infocard.css'
 
 
 
-
-const Infocard = ({clock}) => {
+const Infocard = ({clock, title , text}) => {
+   
    
     return (
-        <div>
-            <div class="card card-side ">
+        <div className='cardShadow'>
+            <div class="card card-side p-4">
                 <figure><img src={clock} alt="Movie" /></figure>
                 <div class="card-body">
-                    <h2 class="card-title">New movie is released!</h2>
-                    <p>Click the button to watch on Jetflix app.</p>
+                    <h2 class="card-title text-white text-left"> {title} </h2>
+                    <p className='text-white font-bold text-left'> {text}.</p>
                 </div>
             </div>
         </div>

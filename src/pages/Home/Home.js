@@ -10,7 +10,7 @@ const Home = () => {
            <Homebanner></Homebanner>
 
  {/* Home pages basic time location  informaiton cards */}
-           <div>
+           <div className='mt-[-55px]  '>
                <InfoCards></InfoCards>
            </div>
            

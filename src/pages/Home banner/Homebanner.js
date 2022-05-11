@@ -15,8 +15,8 @@ const Homebanner = () => {
               
                 {/* className='sm:mt-[-200px] md:mt-[10px]' */}
                 <div>
-                    <h1 class="text-5xl font-bold text-accent ">Your New Smile Starts Here</h1>
-                    <p class="py-6 text-accent">i eaque aut repudiandae et a id nisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sed illum culpa itaque inventore alias ut ad aspernatur minus impedit..</p>
+                    <h1 class="text-5xl font-bold text-accent text-left">Your New Smile Starts Here</h1>
+                    <p class="py-6 text-accent text-left">i eaque aut repudiandae et a id nisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sed illum culpa itaque inventore alias ut ad aspernatur minus impedit..</p>
                     <button class="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold">Get Started</button>
                 </div>
             </div>
