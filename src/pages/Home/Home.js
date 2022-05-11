@@ -2,6 +2,7 @@ import React from 'react';
 import DoctorSaid from '../../components/Doctoe said/DoctorSaid';
 import Explain from '../../components/Explainations/Explain';
 import InfoCards from '../../components/Home page Information/InfoCards';
+import Serviceprovides from '../../components/Services we provides/Serviceprovides';
 import Homebanner from '../Home banner/Homebanner';
 
 
@@ -23,6 +24,11 @@ const Home = () => {
            <div className='mt-[131px]'>
                <Explain></Explain>
            </div>
+{/* services we provides */}
+        <div className='mt-[131px]'> 
+            <Serviceprovides></Serviceprovides>
+        </div>
+
         </div>
     );
 };

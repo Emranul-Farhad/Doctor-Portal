@@ -5,7 +5,7 @@ import './Explain.css'
 // 
 const Explain = () => {
     return (
-        <div className='mx-20 md:mx-0 grid grid-cols-1 lg:grid-cols-5 md:grid-cols-5  '>
+        <div className='mx-1 md:mx-0 grid grid-cols-2 lg:grid-cols-5 md:grid-cols-5  '>
             <div class="image-gallery">
 
                 <div className='imagehoverhide'>
@@ -60,7 +60,7 @@ const Explain = () => {
 
             </div>
             {/*  */}
-            <div class="image-gallery mt-10">
+            <div class="image-gallery mt-14 md:mt-10">
 
                 <div className='imagehoverhide'>
                     <img src="http://amentotech.com/projects/doctreat/wp-content/uploads/2019/10/4.png" alt="" />
