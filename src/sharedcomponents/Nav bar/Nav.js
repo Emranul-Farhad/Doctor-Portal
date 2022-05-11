@@ -12,7 +12,7 @@ const Nav = () => {
     </>
 
     return (
-        <div>
+        <div className='pt-6'>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -29,7 +29,7 @@ const Nav = () => {
 {/* nav bar logo */}
 
                 </div>
-                <div class="navbar-center hidden lg:flex">
+                <div class=" hidden lg:flex">
                     <ul class="menu menu-horizontal p-0 bg-base-500 ">
                         {navlinks}
                     </ul>
