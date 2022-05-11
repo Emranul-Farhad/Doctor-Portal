@@ -1,0 +1,43 @@
+.image-gallery{
+    width: 270px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.295);
+    position: relative;  
+    box-shadow: -5px 6px 7px rgb(156, 145, 145) ;    
+}
+
+.image-gallery img{
+    width: 50%;
+    border-radius: 5px;
+    overflow:hidden ;
+}
+
+.showtext{
+    /* top: 1px; */
+    /* position: absolute; */
+    margin-top: -100px;
+}
+
+.photodetails{
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    
+}
+
+.image-gallery:hover .photodetails{
+    visibility: visible;
+    transition: 5s ease-in;
+
+}
+
+.image-gallery:hover .imagehoverhide{
+    visibility: hidden;
+    
+}
+
+.image-gallery:hover .showtext{
+    visibility: hidden;
+}

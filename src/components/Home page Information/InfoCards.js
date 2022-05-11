@@ -9,7 +9,7 @@ const InfoCards = () => {
 
     return (
         <div className='grid grid-cols-3 gap-4 p-6'>
-            <div className=' bg-gradient-to-r from-primary to-secondary  rounded-lg'>           
+            <div className=' bg-gradient-to-r from-primary to-secondary  rounded-lg shadow-2xl'>           
                  <Infocard title='Opening Hours' text='7/24' clock={clock} ></Infocard>
             </div>
            
