@@ -8,7 +8,7 @@ import phone from '../../Images/icons/phone.svg'
 const InfoCards = () => {
 
     return (
-        <div className='grid grid-cols-3 gap-4 p-6'>
+        <div className='grid grid-cols-1 gap-4 p-6 md:grid-cols-3 lg:grid-cols-3 '>
             <div className=' bg-gradient-to-r from-primary to-secondary  rounded-lg shadow-2xl'>           
                  <Infocard title='Opening Hours' text='7/24' clock={clock} ></Infocard>
             </div>
