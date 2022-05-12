@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Footer.css'
+import './Foter.css'
 
-
-const Footer = () => {
+const Foter = () => {
     return (
-        <section className='backgroundimagefooter'> 
+        <div>
+                  <section className='backgroundimagefooter'> 
         <div className='mt-24'>
             <footer className="footer p-10">
                 <div>
@@ -45,7 +45,8 @@ const Footer = () => {
             </footer>
         </div>
         </section>
+        </div>
     );
 };
 
-export default Footer;
+export default Foter;

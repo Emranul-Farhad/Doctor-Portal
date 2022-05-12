@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Nav from './sharedcomponents/Nav bar/Nav';
 import Home from './pages/Home/Home';
-import Footer from './pages/Footer/Footer';
+
+import Appoinmentpage from './pages/Appoinment/Appoinmentpage';
+
 
 
 
@@ -11,13 +12,12 @@ import Footer from './pages/Footer/Footer';
 function App() {
 
   return (
-    <div className="App">
-
-      <Nav></Nav>
+    <div className="App max-w-7xl mx-auto ">
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
+        <Route path='/appoinment' element={<Appoinmentpage></Appoinmentpage>} ></Route>
+
       </Routes>
-      <Footer></Footer>
       
     </div>
   );

@@ -5,7 +5,7 @@ const Nav = () => {
 
     const navlinks = <>
         <li> <NavLink className="text-accent font-bold" to='/'> Home</NavLink> </li>
-        <li> <NavLink className="text-accent font-bold"  to='/Appoinment' > Appoinment </NavLink> </li>
+        <li> <NavLink className="text-accent font-bold"  to='/appoinment'> Appoinment </NavLink> </li>
         <li> <NavLink className="text-accent font-bold" to='/ Reviews' > Reviews </NavLink> </li>
         <li> <NavLink className="text-accent font-bold" to='/ Contact us' > Contact us </NavLink></li>
         <li> <NavLink className="text-accent font-bold" to='/login' > login </NavLink> </li>

@@ -11,7 +11,7 @@ const Homebanner = () => {
             <div class="hero min-h-screen ">
             <div class="hero-content flex-col lg:flex-row-reverse">
               
-                    <img src={chair} class="w-[100%] lg:w-[60%] chair hidden md:block rounded-lg shadow-1xl" />
+                    <img src={chair} class="w-[100%] lg:w-[60%] chair hidden md:block rounded-lg shadow-1xl" alt='chair'/>
               
                 {/* className='sm:mt-[-200px] md:mt-[10px]' */}
                 <div>
