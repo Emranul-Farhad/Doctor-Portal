@@ -1,4 +1,5 @@
 import React from 'react';
+import Connectedfrom from '../../components/coonected form/Connectedfrom';
 import DoctorSaid from '../../components/Doctoe said/DoctorSaid';
 import Doctors from '../../components/Doctors/Doctors';
 import Explain from '../../components/Explainations/Explain';
@@ -48,7 +49,10 @@ const Home = () => {
         <div>
             <Testimonials></Testimonials>
         </div>
-        
+{/* Connected form takeing name email  and  message  */}
+        <div>
+            <Connectedfrom></Connectedfrom>
+        </div>
         </div>
     );
 };

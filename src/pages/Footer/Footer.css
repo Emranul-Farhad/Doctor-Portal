@@ -1,0 +1,11 @@
+.backgroundimagefooter{
+    background-image: url('https://online-doctors-portal.web.app/static/media/footer-bg.f9bdf3e5.png');
+    min-height: 100%;
+   min-width: 100%;
+   /* background-position: cover; */
+   background-size: cover;
+}
+
+.footerTexts{
+    color: blue;
+}
