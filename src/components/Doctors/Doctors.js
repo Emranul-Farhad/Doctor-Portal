@@ -1,14 +1,12 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import SwiperCore, { A11y, Autoplay, Navigation, Pagination, Scrollbar, Virtual } from 'swiper';
 import Doctor from '../Doctor/Doctor';
-import {Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay, Zoom } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
-// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Virtual]);
+import './Doctors.css';
 
 
 
@@ -142,21 +140,34 @@ const Doctors = () => {
 
     return (
 
-        <div>
-            <h1 className='text-4xl font-bold text-primary text-center mt-20' > Our Dedicated Doctors </h1>
+        <div className='mt-10' >
 
+           
+           <div>
+           <h1 className='text-4xl font-bold text-primary text-center mt-20'> Our Dedicated <br/> 
+           <div className=' w-[160px] h-1 bg-primary first '>  </div> 
+           <span className="text-secondary docotrtag mx-[37px] "> Doctors 
+           <div className="seccond w-[122px] h-1 bg-primary " > </div> </span> </h1>
+           </div>
+          
+            
 
+          {/* <div className='flex justify-center align-center ' >
+              <div className="h-1 w-20 bg-primary first" ></div>
+              <div className="h-1 w-20 bg-secondary seccond " ></div>
+          </div> */}
 
-{/* className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-10 rounded-xl mt-16' */}
-            <div>
+            {/* className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-10 rounded-xl mt-16' */}
+
+            <div className='p-10' >
 
                 <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    modules={[Navigation, Autoplay, Pagination, Scrollbar, Zoom, A11y]}
                     spaceBetween={20}
                     slidesPerView={3}
                     centeredslide="true"
                     navigation
-                    key= {doctors.length}
+                    key={doctors.length}
                     autoplay={true}
                 >
 
