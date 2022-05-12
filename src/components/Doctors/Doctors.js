@@ -145,17 +145,13 @@ const Doctors = () => {
            
            <div>
            <h1 className='text-4xl font-bold text-primary text-center mt-20'> Our Dedicated <br/> 
-           <div className=' w-[160px] h-1 bg-primary first '>  </div> 
-           <span className="text-secondary docotrtag mx-[37px] "> Doctors 
-           <div className="seccond w-[122px] h-1 bg-primary " > </div> </span> </h1>
+           <div className=' w-[160px] h-1 bg-primary first hidden lg:block '>  </div> 
+           <span className="text-secondary docotrtag mx-[37px]"> Doctors 
+           <div className="seccond w-[122px] h-1 bg-primary hidden lg:block " > </div> </span> </h1>
            </div>
           
             
 
-          {/* <div className='flex justify-center align-center ' >
-              <div className="h-1 w-20 bg-primary first" ></div>
-              <div className="h-1 w-20 bg-secondary seccond " ></div>
-          </div> */}
 
             {/* className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-10 rounded-xl mt-16' */}
 
