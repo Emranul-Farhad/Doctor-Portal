@@ -6,6 +6,7 @@ import InfoCards from '../../components/Home page Information/InfoCards';
 import Howwork from '../../components/How it Works/Howwork';
 import Serviceprovides from '../../components/Services we provides/Serviceprovides';
 import Appoinment from '../../components/Take appionment/Appoinment';
+import Testimonials from '../../components/Testimonial/Testimonials';
 import Homebanner from '../Home banner/Homebanner';
 
 
@@ -43,7 +44,11 @@ const Home = () => {
         <div>
             <Howwork></Howwork>
         </div>
-
+{/* testimonials whaat says our cysromer */}
+        <div>
+            <Testimonials></Testimonials>
+        </div>
+        
         </div>
     );
 };
