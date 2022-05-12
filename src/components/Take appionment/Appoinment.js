@@ -32,7 +32,7 @@ const Appoinment = () => {
 					{reviews.map((reviews, index) => (
 						<SwiperSlide key={index}>
 							<Testimonial reviews={reviews} />
-						</SwiperSlide>
+						</SwiperSlide>app
 					))}
 				</Swiper> */}
 

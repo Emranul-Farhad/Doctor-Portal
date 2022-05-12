@@ -43,11 +43,11 @@ const Serviceprovides = () => {
     return (
         <div>
 
-           <h1 class="text-4xl font-bold"> Our Services <br /> <span className='text-2xl text-primary tracking-wide' > That We Provides </span> </h1>
+           <h1 class="text-4xl text-center font-bold"> Our Services <br /> <span className='text-2xl text-primary tracking-wide' > That We Provides </span> </h1>
 
-           <div className='mt-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 px-20 '>
+           <div className='gap-4 mt-10 grid grid-cols-1 lg:gap-7 lg:grid-cols-3 md:grid-cols-2  px-20 '>
               {
-                  services .map(service => <Serviceprovide service={service} ></Serviceprovide> )
+                  services.map(service => <Serviceprovide service={service} ></Serviceprovide> )
               }
            </div>
         </div>

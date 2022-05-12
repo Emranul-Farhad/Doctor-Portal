@@ -1,5 +1,6 @@
 import React from 'react';
 import DoctorSaid from '../../components/Doctoe said/DoctorSaid';
+import Doctors from '../../components/Doctors/Doctors';
 import Explain from '../../components/Explainations/Explain';
 import InfoCards from '../../components/Home page Information/InfoCards';
 import Serviceprovides from '../../components/Services we provides/Serviceprovides';
@@ -33,7 +34,9 @@ const Home = () => {
         <div className='mt-[131px]'>
             <Appoinment></Appoinment>
         </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam ullam maxime, repudiandae ea officia quas quibusdam quis, inventore consectetur esse temporibus, ipsam fugit quo possimus! Qui inventore perspiciatis doloribus praesentium repellat voluptate dolorem, magni libero vel at sapiente excepturi omnis rerum tempora rem consequuntur accusantium esse sint minima aliquam soluta?</p>
+{/* Doctors section  */}
+       <Doctors></Doctors>
+       
         </div>
     );
 };
