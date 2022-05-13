@@ -1,6 +1,5 @@
 [
   {
-    "id": "01",
     "img": "https://i.imgur.com/Al8YdLM.jpg",
     "categorey": "Medicine, Diabetes, Thyroid & Hormone",
     "name": "Dr. Md. Firoj Hossain",
@@ -17,7 +16,6 @@
     ]
   },
   {
-    "id": "02",
     "img": "https://i.imgur.com/eURUI0b.jpg",
     "categorey": "Diet & Nutrition Consultant",
     "name": "Ms. Jayoti Mukherjee",
@@ -34,7 +32,7 @@
     ]
   },
   {
-    "id": "03",
+    
     "img": "https://i.imgur.com/RlfZMBR.jpg",
     "categorey": "Medicine & Chest Specialist (Pulmonologist)",
     "name": "Dr. Rajib Kumar Saha",
@@ -52,7 +50,7 @@
     ]
   },
   {
-    "id": "04",
+    
     "img": "https://i.imgur.com/n0yum0a.jpg",
     "categorey": "Neonate & Child Specialist",
     "name": "Dr. Salahuddin Mahmud",
@@ -66,7 +64,7 @@
     ]
   },
   {
-    "id": "05",
+    
     "img": "https://i.imgur.com/VP1xMDg.jpg",
     "categorey": "Dermatologist (Skin, Allergy, Hair, Sex)",
     "name": "Dr. Humaira Afreen",
@@ -80,7 +78,7 @@
     ]
   },
   {
-    "id": "06",
+    
     "img": "https://i.imgur.com/E7VjZxG.jpg",
     "categorey": "Ears, Nose and Throat (ENT) Specialist",
     "name": "Dr. Rashedul Hasan",
@@ -91,7 +89,7 @@
     "slots": []
   },
   {
-    "id": "07",
+    
     "img": "https://i.imgur.com/KX5Csjv.jpg",
     "categorey": "Gynaecologist",
     "name": "Dr. Riffat Rahim",
@@ -106,7 +104,7 @@
     ]
   },
   {
-    "id": "08",
+    
     "img": "https://i.imgur.com/a9HMk43.jpg",
     "categorey": "Neurologist",
     "name": "PROF. DR. Mohd. Mozibor",
@@ -121,7 +119,7 @@
     ]
   },
   {
-    "id": "09",
+    
     "img": "https://i.imgur.com/B63wRTP.png",
     "categorey": "Dentist",
     "name": "Dr. Shahana Dastagir",
@@ -138,7 +136,7 @@
     ]
   },
   {
-    "id": "10",
+    
     "img": "https://i.imgur.com/X9ehOrA.jpg",
     "categorey": "Orthopaedic Surgeon",
     "name": "Dr. Asadullah Ripon",
@@ -152,7 +150,7 @@
     ]
   },
   {
-    "id": "11",
+    
     "img": "https://i.imgur.com/n8SzXfM.jpg",
     "categorey": "Nephrologist",
     "name": "Dr. Shudhanshu Kumar",
@@ -168,7 +166,6 @@
     ]
   },
   {
-    "id": "12",
     "img": "https://i.imgur.com/ZJt3sxW.jpg",
     "categorey": "General and Colorectal Surgeon",
     "name": "Dr. Nazmul Hoque Masum",

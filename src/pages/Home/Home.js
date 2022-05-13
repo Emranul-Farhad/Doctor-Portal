@@ -27,7 +27,7 @@ const Home = () => {
             </div>
             {/* doctor said */}
             <div className='mt-[130px]'>
-                <DoctorSaid></DoctorSaid>
+            <DoctorSaid></DoctorSaid>
             </div>
             {/* website services explain how to get services */}
             <div className='mt-[131px]'>

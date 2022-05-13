@@ -13,7 +13,7 @@ const Availappoiments = ({ date }) => {
     }
     const [availabledoctors  , setAvailabledoctors] = useState([])
     useEffect(()=> {
-        fetch("services.json")
+        fetch("http://localhost:8000/services")
         .then(res => res.json())
         .then(data => setAvailabledoctors(data))
     }, []) 
