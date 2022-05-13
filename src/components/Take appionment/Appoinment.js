@@ -2,7 +2,7 @@ import React from 'react';
 import appointment from '../../Images/images/appointment.png'
 import doctor from '../../Images/images/doctor.png'
 
-
+// appoinment home page banner
 
 const Appoinment = () => {
     return (

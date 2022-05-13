@@ -29,7 +29,7 @@ const Availappoiments = ({ date }) => {
             </div>
           
              {
-                 popusp && <Mymodal modaldetails={popusp}> </Mymodal>
+                 popusp && <Mymodal dateforappoinments={date} modaldetails={popusp}> </Mymodal>
              }
           
         </div>
