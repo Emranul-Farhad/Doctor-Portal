@@ -176,18 +176,6 @@ const Doctors = () => {
                     }
 
                 </Swiper>
-
-
-
-
-
-                {/* {
-                    doctors.map((doctor, index) => (
-                        <Doctor key={doctor.id} doctor={doctor} ></Doctor>
-                    ))
-                } */}
-
-
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import './Doctor.css'
 import {AiFillCalendar} from 'react-icons/ai'
 
 const Doctor = ({ doctor}) => {
-	const { img, category, name, education, designation, department, hospital } = doctor;
+	const { img, category, name, education, designation, department, hospital , slots } = doctor;
 	const [ descriptionCollapse, setDescriptionCollapse ] = useState(true);
 
 	const showMore = () => {
