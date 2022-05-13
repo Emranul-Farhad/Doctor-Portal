@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 
 import Appoinmentpage from './pages/Appoinment/Appoinmentpage';
+import LOgin from './pages/Login/LOgin';
+import Signin from './pages/Sign in/Signin';
 
 
 
@@ -16,7 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
         <Route path='/appoinment' element={<Appoinmentpage></Appoinmentpage>} ></Route>
-
+        <Route path='/login' element={<LOgin></LOgin>} ></Route>
+        <Route path='/signin' element={<Signin></Signin>} ></Route>
       </Routes>
       
     </div>
