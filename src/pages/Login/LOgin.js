@@ -40,7 +40,7 @@ const LOgin = () => {
 
 
     return (
-        <div className=''>
+        <div>
             <Nav></Nav>
             <div className='flex justify-center align-center mt-20'>
                 <div className="card w-96 bg-base-100 shadow-xl">

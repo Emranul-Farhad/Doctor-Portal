@@ -1,14 +1,25 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
+import auth from '../../Firebasekey/Firebasekey';
+
+
 
 const Nav = () => {
+
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+      };
 
     const navlinks = <>
         <li> <NavLink className="text-accent font-bold" to='/'> Home</NavLink> </li>
         <li> <NavLink className="text-accent font-bold"  to='/appoinment'> Appoinment </NavLink> </li>
         <li> <NavLink className="text-accent font-bold" to='/ Reviews' > Reviews </NavLink> </li>
         <li> <NavLink className="text-accent font-bold" to='/ Contact us' > Contact us </NavLink></li>
-        <li> <NavLink className="text-accent font-bold" to='/login' > login </NavLink> </li>
+        <li>{ user ? <button  onClick={logout} class="btn btn-outline btn-error">Logout</button> : <NavLink className="text-accent font-bold" to='/login'> login </NavLink> }</li>
     </>
 
     return (

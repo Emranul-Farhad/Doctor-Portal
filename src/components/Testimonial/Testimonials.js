@@ -58,7 +58,6 @@ const Testimonials = () => {
                     spaceBetween={20}
                     slidesPerView={3}
                     centeredslide="true"
-                    // navigation
                     key={testimonials.length}
                     autoplay={true}
                 >
