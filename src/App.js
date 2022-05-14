@@ -10,6 +10,8 @@ import NotFound from './components/Not Found/NotFound';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './Firebasekey/Firebasekey';
 import Loader from './components/Loading/Loader';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -29,6 +31,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>} ></Route>
       </Routes> 
       } 
+       <ToastContainer />
     </div>
   
   );

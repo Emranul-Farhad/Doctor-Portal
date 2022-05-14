@@ -24,7 +24,7 @@ const Availappoiments = ({ date }) => {
             
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-10 rounded-xl mt-16'>
                 {
-                    availabledoctors.map(availabledoctor => <Availableappoinment key={availabledoctor.id} availabledoctor={availabledoctor} modals={setModal} ></Availableappoinment> )
+                    availabledoctors.map(availabledoctor => <Availableappoinment key={availabledoctor._id} availabledoctor={availabledoctor} modals={setModal} ></Availableappoinment> )
                 }
             </div>
           

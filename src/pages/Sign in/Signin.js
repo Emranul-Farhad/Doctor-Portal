@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../../sharedcomponents/Nav bar/Nav';
 import { useForm } from "react-hook-form";
 import auth from '../../Firebasekey/Firebasekey';
 import { useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Loader from '../../components/Loading/Loader';
 
 const Signin = () => {
@@ -36,11 +36,24 @@ const Signin = () => {
         else
         {
         await createUserWithEmailAndPassword(data.email , data.password )
-        await updateProfile({ displayName:data.name})
+        await updateProfile({ displayName:data.name , last:data.lastname})
         console.log(data.name);
         console.log("adhhs", data.email , data.password);
         }
     } 
+
+
+    // Navigate replace handel
+    const navigate = useNavigate()
+    const location = useLocation()
+    let from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if(suser ||  googleuser ){
+            navigate(from, { replace: true });
+        }
+    },[ suser,googleuser,from,navigate])
+
 
     // handelerro
     let signuperror;
@@ -71,12 +84,12 @@ const Signin = () => {
                                 <span className="label-text mb-2">Name</span>
                                 <input
                                     type="text"
-                                    placeholder="Type your Email"
+                                    placeholder="Type your First"
                                     className="input input-bordered w-full max-w-xs input-info"
                                     {...register("name", {
                                         required: {
                                             value: true,
-                                            message: "please input your full name"
+                                            message: "please input your fast name"
                                         },
                                         minLength: {
                                             value: 2,
@@ -87,6 +100,30 @@ const Signin = () => {
                                 <label className="label">
                                     {errors.name?.type === 'minLength' && <span className="label-text-alt text-[red] "> {errors.name.message} </span>}
                                     {errors.name?.type === 'required' && <span className="label-text-alt text-[red] "> {errors.name.message} </span>}
+                                </label>
+                            </div>
+                            {/* fitst name taking done */}
+                            {/* last name taking */}
+                            <div className="form-control w-full max-w-xs">
+                                <span className="label-text mb-2">Last Name</span>
+                                <input
+                                    type="text"
+                                    placeholder="Type your last Name"
+                                    className="input input-bordered w-full max-w-xs input-info"
+                                    {...register("lastname", {
+                                        required: {
+                                            value: true,
+                                            message: "please input your last name"
+                                        },
+                                        minLength: {
+                                            value: 2,
+                                            message: 'please input your last name' 
+                                          }
+                                    })}
+                                />
+                                <label className="label">
+                                    {errors.lastname?.type === 'minLength' && <span className="label-text-alt text-[red] "> {errors.lastname.message} </span>}
+                                    {errors.lastname?.type === 'required' && <span className="label-text-alt text-[red] "> {errors.lastname.message} </span>}
                                 </label>
                             </div>
                             {/* name taking end here */}

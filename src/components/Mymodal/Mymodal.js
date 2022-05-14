@@ -1,18 +1,62 @@
 import { format } from 'date-fns';
-import React from 'react';
+import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Firebasekey/Firebasekey';
+import {toast} from 'react-toastify';
+
 
 
 
 
 const Mymodal = ({ modaldetails, dateforappoinments }) => {
-    const { img, categorey, name, education, designation, department, hospital, slots } = modaldetails
+    const { img, categorey, name, education, _id, designation, department, hospital, slots } = modaldetails
 
+
+    const takingdates = format(dateforappoinments, "PP")
+    // submit button handel
     const appoinmentbook = event => {
         event.preventDefault();
-        // const slot = event.target.slot.value;
-        // console.log(slot);
-        const solts = event.target.slot.value ;
-        console.log(solts);
+        const userappointmnettakingform = {
+            treatmentid: _id,
+            doctorcategorey: categorey,
+            appointmentDate: takingdates,
+            appoinmentslot: event.target.slot.value,
+            appoinmentpattientname: user?.displayName,
+            appoinmentpattientemail: user?.email,
+            appoinmentpattientnumber: event.target.number.value,
+            appoinmentpattientproblem : event.target.problem.value
+        }
+        fetch('http://localhost:8000/appoinments', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userappointmnettakingform),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                if(data.success){
+                    toast(`appoinment setted ${takingdates} at ${event.target.slot.value}`)
+                }
+                else{
+                    toast.error(`alredy setted in ${data?.appoinmentget.appointmentDate} at ${data.appoinmentget.appoinmentslot}`)
+                }
+            })
+
+    }
+
+    // user information deafult save by disable
+    const [user] = useAuthState(auth)
+
+    let fnames;
+    if (user) {
+        fnames = user?.displayName.split(' ')[0]
+    }
+
+    let lastname;
+    if (user) {
+        lastname = user?.displayName.split(' ')[1]
     }
 
     return (
@@ -35,35 +79,40 @@ const Mymodal = ({ modaldetails, dateforappoinments }) => {
                             <h3 className='text-center text-1xl font-bold text-accent mt-2 mb-1' >  {name} </h3>
                             {/* <h3 className='text-center  text-accent font-bold mb-5' > {format(dateforappoinments, 'PP',)} </h3> */}
 
-
-                            <input className='mb-2 bg-white text-primary font-bold mx-auto' type="text" placeholder={format(dateforappoinments, 'PP',)} value={format(dateforappoinments, 'PP',)} disabled />
+                            {/* date taking from react day picker */}
+                            <input
+                                className='mb-2 bg-white text-primary font-bold mx-auto'
+                                type="text"
+                                placeholder={format(dateforappoinments, 'PP',)}
+                                value={format(dateforappoinments, 'PP',)} disabled
+                            />
 
                             <select name='slot' class="select select-info w-full">
-                               {
-                                   slots.map(slot => <option value={slot} > {slot} </option> )
-                               }
+                                {
+                                    slots.map(slot => <option value={slot} > {slot} </option>)
+                                }
                             </select>
 
                             <div className='flex flex-row gap-3 mt-2'>
-                                <input type="text" placeholder="First Name" className="input input-bordered input-info w-full max-w-xs" />
-                                <input type="text" placeholder="Last Name" className="input input-bordered input-info w-full max-w-xs" />
+                                <input value={fnames} disabled type="text" placeholder="First Name" className="input input-bordered input-info w-full max-w-xs" />
+                                <input value={lastname} disabled type="text" placeholder="Last Name" className="input input-bordered input-info w-full max-w-xs" />
                             </div>
                             <div className='flex flex-row gap-3 mt-3'>
-                                <input type="text" placeholder="Email" className="input input-bordered input-info w-full max-w-xs" />
-                                <input type="text" placeholder="Phone Number" className="input input-bordered input-info w-full max-w-xs" />
+                                <input value={user?.email} disabled type="text" placeholder="Email" className="input input-bordered input-info w-full max-w-xs" />
+                                <input name='number' type="text" placeholder="Phone Number" className="input input-bordered input-info w-full max-w-xs" />
                             </div>
                             <div className='flex flex-row gap-3 mt-4'>
-                                <input type="text" placeholder="Age" className="input input-bordered input-info w-full max-w-xs" />
-                                <input type="select" placeholder="Weight" className="input input-bordered input-info w-full max-w-xs" />
-                                <select id="cars" className="text-accent input input-bordered input-info w-full max-w-xs" >
+                                <input name='age' type="text" placeholder="Age" className="input input-bordered input-info w-full max-w-xs" />
+                                <input name='weight' type="select" placeholder="Weight" className="input input-bordered input-info w-full max-w-xs" />
+                                <select id="gender" className="text-accent input input-bordered input-info w-full max-w-xs" >
                                     <option disabled value="Not set" selected >select gender</option>
-                                    <option value="volvo">Male</option>
-                                    <option value="saab">Femal</option>
-                                    <option value="vw">Other</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Femal</option>
+                                    <option value="Other">Other</option>
 
                                 </select>
                             </div>
-                            <textarea className='input input-bordered input-info mt-10' name="" id="" cols="60" rows="21"></textarea>
+                            <textarea  className='input input-bordered input-info mt-10' name="problem" id="" cols="60" rows="21"></textarea>
                             <input class=" mt-4 mx-5 btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold" type="submit" submit />
                         </form>
                     </div>

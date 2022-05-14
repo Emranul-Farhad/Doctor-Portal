@@ -8,11 +8,22 @@
     "department": "Department of Endocrinology",
     "hospital": "Mugda Medical College & Hospital",
     "slots": [
+      "08.00 AM - 08.30 AM",
       "08.30 AM - 09.00 AM",
       "09.00 AM - 9.30 AM",
       "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -24,11 +35,22 @@
     "department": "Surecell Medical BD",
     "hospital": "Ex- VLCC Healthcare & VIBES Healthcare",
     "slots": [
+      "08.00 AM - 08.30 AM",
       "08.30 AM - 09.00 AM",
       "09.00 AM - 9.30 AM",
       "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -46,7 +68,17 @@
       "09.00 AM - 9.30 AM",
       "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -59,8 +91,22 @@
     "department": "Department of Pediatric  Gastroenterology ",
     "hospital": "Dhaka Shishu (Children) Hospital",
     "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -73,8 +119,22 @@
     "department": "Skin & VD Department",
     "hospital": "SSMC Mitford Hospital, Dhaka",
     "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -86,7 +146,24 @@
     "designation": "Consultant",
     "department": "Department of Ears, Nose and Throat",
     "hospital": "Prescription Point, Banani ",
-    "slots": []
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ]
   },
   {
     
@@ -98,9 +175,22 @@
     "department": "Department of Gynae & Obs",
     "hospital": "Mugda Medical College, Dhaka",
     "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
       "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -113,9 +203,22 @@
     "department": "Neurology Department",
     "hospital": "United Hospital Ltd., Gulshan 2",
     "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
       "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -128,11 +231,22 @@
     "department": "Department of Dentistry",
     "hospital": "BIRDEM Hospital & Ibrahim Medical College",
     "slots": [
+      "08.00 AM - 08.30 AM",
       "08.30 AM - 09.00 AM",
       "09.00 AM - 9.30 AM",
       "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -145,8 +259,22 @@
     "department": "Department of Orthopedics",
     "hospital": "Enam Medical College and Hospital",
     "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -159,10 +287,22 @@
     "department": "Department of Nephrology & Dialysis",
     "hospital": "BIRDEM Hospital & Ibrahim Medical College",
     "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
       "09.00 AM - 9.30 AM",
       "09.30 AM - 10.00 AM",
       "10.00 AM - 10.30 AM",
-      "10.30 AM - 11.00 AM"
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
@@ -174,7 +314,22 @@
     "department": "Department of Surgery",
     "hospital": "Dhaka Medical College & Hospital",
     "slots": [
-      
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   }
 ]
