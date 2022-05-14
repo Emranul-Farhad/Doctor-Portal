@@ -6,27 +6,31 @@ import Appoinmentpage from './pages/Appoinment/Appoinmentpage';
 import LOgin from './pages/Login/LOgin';
 import Signin from './pages/Sign in/Signin';
 import Require from './components/RequireAuth/Require';
-import LOading from './components/Loading/LOading';
 import NotFound from './components/Not Found/NotFound';
-
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from './Firebasekey/Firebasekey';
+import Loader from './components/Loading/Loader';
 
 
 
 
 function App() {
+  const [user, loading] = useAuthState(auth)
 
   return (
-    <div className="App max-w-7xl mx-auto ">
-      <Routes>
+    
+      <div className="App max-w-7xl mx-auto ">
+    { loading ? <Loader></Loader> :
+     <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
         <Route path='/appoinment' element={ <Require><Appoinmentpage></Appoinmentpage></Require> } ></Route>
         <Route path='/login' element={<LOgin></LOgin>} ></Route>
         <Route path='/signin' element={<Signin></Signin>} ></Route>
-        <Route path='/loading' element={<LOading></LOading> } ></Route>
         <Route path='*' element={<NotFound></NotFound>} ></Route>
-      </Routes>
-      
+      </Routes> 
+      } 
     </div>
+  
   );
 }
 

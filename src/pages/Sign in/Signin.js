@@ -5,6 +5,7 @@ import auth from '../../Firebasekey/Firebasekey';
 import { useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
+import Loader from '../../components/Loading/Loader';
 
 const Signin = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -51,8 +52,12 @@ const Signin = () => {
 
 
     return (
-        <div>
+        <div> 
+
            <Nav></Nav>
+
+           { loading || goleloading ? <Loader> </Loader> :
+
            <div>
            <div className='flex justify-center align-center mt-20'>
                 <div className="card w-96 bg-base-100 shadow-xl">
@@ -182,6 +187,7 @@ const Signin = () => {
                 </div>
             </div>
            </div>
+}
         </div>
     );
 };
