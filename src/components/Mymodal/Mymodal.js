@@ -2,13 +2,13 @@ import { format } from 'date-fns';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebasekey/Firebasekey';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 
 
 
-const Mymodal = ({ modaldetails, dateforappoinments }) => {
+const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
     const { img, categorey, name, education, _id, designation, department, hospital, slots } = modaldetails
 
 
@@ -24,7 +24,7 @@ const Mymodal = ({ modaldetails, dateforappoinments }) => {
             appoinmentpattientname: user?.displayName,
             appoinmentpattientemail: user?.email,
             appoinmentpattientnumber: event.target.number.value,
-            appoinmentpattientproblem : event.target.problem.value
+            appoinmentpattientproblem: event.target.problem.value
         }
         fetch('http://localhost:8000/appoinments', {
             method: 'POST', // or 'PUT'
@@ -35,16 +35,30 @@ const Mymodal = ({ modaldetails, dateforappoinments }) => {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data, "here from");
                 console.log('Success:', data);
                 if(data.success){
-                    toast(`appoinment setted ${takingdates} at ${event.target.slot.value}`)
+                    toast(`appoinment setted in ${takingdates} at${event.target.slot.value} `)
                 }
                 else{
-                    toast.error(`alredy setted in ${data?.appoinmentget.appointmentDate} at ${data.appoinmentget.appoinmentslot}`)
+                    toast.error(`already setted in ${data?.userappointmnettakingform.appointmentDate} at ${data?.userappointmnettakingform.appoinmentslot}`)
                 }
+                refetch()
+               
             })
 
     }
+
+
+
+
+    // console.log(data, "here from");
+    // if(data.success){
+    //     toast(`appoinment setted ${takingdates} at ${event.target.slot.value}`)
+    // }
+    // else{
+    //     toast.error(`alresdy setted in ${data?.appoinmentget.appointmentDate} in ${data?.appointmentDate.appoinmentslot}`)
+    // }
 
     // user information deafult save by disable
     const [user] = useAuthState(auth)
@@ -112,7 +126,7 @@ const Mymodal = ({ modaldetails, dateforappoinments }) => {
 
                                 </select>
                             </div>
-                            <textarea  className='input input-bordered input-info mt-10' name="problem" id="" cols="60" rows="21"></textarea>
+                            <textarea className='input input-bordered input-info mt-10' name="problem" id="" cols="60" rows="21"></textarea>
                             <input class=" mt-4 mx-5 btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold" type="submit" submit />
                         </form>
                     </div>

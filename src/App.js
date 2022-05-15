@@ -12,12 +12,15 @@ import auth from './Firebasekey/Firebasekey';
 import Loader from './components/Loading/Loader';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Myappoinments from './components/Myappoinments/Myappoinments';
+import Myhistory from './components/Myhistory/Myhistory';
 
 
 
 
 function App() {
-  const [user, loading] = useAuthState(auth)
+  const [ user ,loading] = useAuthState(auth)
 
   return (
     
@@ -28,6 +31,10 @@ function App() {
         <Route path='/appoinment' element={ <Require><Appoinmentpage></Appoinmentpage></Require> } ></Route>
         <Route path='/login' element={<LOgin></LOgin>} ></Route>
         <Route path='/signin' element={<Signin></Signin>} ></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+          <Route index element={<Myappoinments></Myappoinments>} ></Route>
+          <Route path='myhistory' element={<Myhistory></Myhistory>} ></Route>
+        </Route>
         <Route path='*' element={<NotFound></NotFound>} ></Route>
       </Routes> 
       } 
