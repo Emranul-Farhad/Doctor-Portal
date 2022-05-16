@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../../sharedcomponents/Nav bar/Nav';
 import { useForm } from "react-hook-form";
 import auth from '../../Firebasekey/Firebasekey';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import Token from '../../components/Token/Token';
 
 
 
@@ -37,6 +38,20 @@ const LOgin = () => {
     if(signerror ||  googleerror ){
         loginformerror = <p> {signerror?.message ||  googleerror?.message } </p>
     }
+
+    // handel navigate
+     // Navigate replace handel
+     const [token] = Token(googleuser || signuser)   
+     const navigate = useNavigate()
+     const location = useLocation()
+     let from = location.state?.from?.pathname || "/";
+ 
+     useEffect(() => {
+         if(token){
+             navigate(from, { replace: true });
+         }
+     },[token , from,navigate])
+ 
 
 
     return (

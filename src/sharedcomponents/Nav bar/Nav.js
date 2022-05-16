@@ -12,6 +12,7 @@ const Nav = () => {
 
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem("accesstoken")
     };
 
     const navlinks = <>
@@ -19,7 +20,7 @@ const Nav = () => {
         <li> <NavLink className="text-accent font-bold" to='/appoinment'> Appoinment </NavLink> </li>
         <li> <NavLink className="text-accent font-bold" to='/Reviews' > Reviews </NavLink> </li>
         <li> <NavLink className="text-accent font-bold" to='/Contact us' > Contact us </NavLink></li>
-        <li> <NavLink className="text-accent font-bold mr-1" to='/dashboard' > Dashboard </NavLink></li>
+        <li> { user &&  <NavLink className="text-accent font-bold mr-1" to='/dashboard' > Dashboard </NavLink>}</li>
         <li>{user ? <button onClick={logout} class="btn btn-outline btn-error mx-1">Logout</button> : <NavLink className="text-accent font-bold" to='/login'> login </NavLink>}</li>
     </>
 

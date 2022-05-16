@@ -6,13 +6,17 @@ import { useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Navigate, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Loader from '../../components/Loading/Loader';
+import Token from '../../components/Token/Token';
+
 
 const Signin = () => {
+    // react form
     const { register, formState: { errors }, handleSubmit } = useForm();
+
 
     // sign up with google
     const [signInWithGoogle, googleuser, goleloading, goerror] = useSignInWithGoogle(auth);
-    console.log(googleuser);
+  
 
     // sing up with email password
     const [
@@ -25,7 +29,7 @@ const Signin = () => {
  
     // user Update
     const [updateProfile, userpdating, usererror] = useUpdateProfile(auth);
-    console.log(updateProfile);
+    
 
 
     // sign  up handel button
@@ -37,22 +41,18 @@ const Signin = () => {
         {
         await createUserWithEmailAndPassword(data.email , data.password )
         await updateProfile({ displayName:data.name , last:data.lastname})
-        console.log(data.name);
-        console.log("adhhs", data.email , data.password);
         }
     } 
 
+    // token uses
+    const [token] = Token(suser || googleuser)
 
     // Navigate replace handel
     const navigate = useNavigate()
-    const location = useLocation()
-    let from = location.state?.from?.pathname || "/";
-
-    useEffect(() => {
-        if(suser ||  googleuser ){
-            navigate(from, { replace: true });
+    
+        if(token){
+            navigate('/');
         }
-    },[ suser,googleuser,from,navigate])
 
 
     // handelerro
@@ -61,6 +61,10 @@ const Signin = () => {
         signuperror = <p> {serror?.message ||  goerror?.message || usererror?.message } </p>
     }
 
+     
+     
+    
+   
 
 
 
