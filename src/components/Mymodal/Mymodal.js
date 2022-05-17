@@ -9,12 +9,14 @@ import { toast } from 'react-toastify';
 
 
 const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
+
     const { img, categorey, name, education, _id, designation, department, hospital, slots } = modaldetails
 
 
     const takingdates = format(dateforappoinments, "PP")
+
     // submit button handel
-    const appoinmentbook = event => {
+    const appoinmentbook = event => {   
         event.preventDefault();
         const userappointmnettakingform = {
             treatmentid: _id,
@@ -29,7 +31,7 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
         fetch('http://localhost:8000/appoinments', {
             method: 'POST', // or 'PUT'
             headers: {
-                'Content-Type': 'application/json',
+             'Content-Type': 'application/json',
             },
             body: JSON.stringify(userappointmnettakingform),
         })
@@ -46,21 +48,8 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
                 refetch()
                
             })
-
     }
 
-
-
-
-    // console.log(data, "here from");
-    // if(data.success){
-    //     toast(`appoinment setted ${takingdates} at ${event.target.slot.value}`)
-    // }
-    // else{
-    //     toast.error(`alresdy setted in ${data?.appoinmentget.appointmentDate} in ${data?.appointmentDate.appoinmentslot}`)
-    // }
-
-    // user information deafult save by disable
     const [user] = useAuthState(auth)
 
     let fnames;

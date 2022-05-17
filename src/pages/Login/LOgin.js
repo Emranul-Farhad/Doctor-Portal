@@ -6,6 +6,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Token from '../../components/Token/Token';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 
 
 
@@ -24,34 +25,43 @@ const LOgin = () => {
         signuser,
         signloading,
         signerror,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
- 
+
     // sign  in handel button
     const onSubmit = data => {
-        signInWithEmailAndPassword(data.email , data.password )
-        console.log("adhhs", data.email , data.password);
-    } 
+        signInWithEmailAndPassword(data.email, data.password)
+        console.log("adhhs", data.email, data.password);
+    }
 
     // handel erro
     let loginformerror;
-    if(signerror ||  googleerror ){
-        loginformerror = <p> {signerror?.message ||  googleerror?.message } </p>
+    if (signerror || googleerror) {
+        loginformerror = <p> {signerror?.message || googleerror?.message} </p>
     }
 
     // handel navigate
-     // Navigate replace handel
-     const [token] = Token(googleuser || signuser)   
-     const navigate = useNavigate()
-     const location = useLocation()
-     let from = location.state?.from?.pathname || "/";
- 
-     useEffect(() => {
-         if(token){
-             navigate(from, { replace: true });
-         }
-     },[token , from,navigate])
- 
+    // Navigate replace handel
+    const [token] = Token(googleuser || signuser)
+    const navigate = useNavigate()
+    const location = useLocation()
+    let from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
+
+
+    //  foreget password handel
+    // const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(
+    //     auth
+    // );
+
+    //  const forget = async (data)=> {
+    //     console.log(data.email);
+    //  }
 
 
     return (
@@ -70,7 +80,7 @@ const LOgin = () => {
                                     type="text"
                                     placeholder="Type your Email"
                                     className="input input-bordered w-full max-w-xs input-info"
-                                    {...register("email", {
+                                    {...register("name", {
                                         required: {
                                             value: true,
                                             message: "Email required"
@@ -93,11 +103,11 @@ const LOgin = () => {
 
                             <div className="form-control w-full max-w-xs">
                                 <span className="label-text mb-2">Password</span>
-                                <input                           
+                                <input
                                     type="password"
                                     placeholder="Type your Password"
                                     className="input input-bordered input-primary w-full max-w-xs"
-                                    {...register("password", {
+                                    {...register("categorey", {
                                         required: {
                                             value: true,
                                             message: "Passwod required"
@@ -114,7 +124,7 @@ const LOgin = () => {
                                 </label>
                             </div>
 
-                             {/* error */}
+                            {/* error */}
                             <p> {loginformerror} </p>
                             {/* error end here */}
 
@@ -126,17 +136,22 @@ const LOgin = () => {
 
                         {/*form end here */}
 
-                      {/* sign in navigate */}
-                    
-                       <div className='flex'>
-                           <p className='text-accent' >New to Doctors Portal?</p>
-                           <NavLink className='text-primary font-semibold' to='/signin'> Create new account </NavLink>
-                       </div>
+                        {/* sign in navigate */}
+
+                        <div className='flex'>
+                            <p className='text-accent' >New to Doctors Portal?</p>
+                            <NavLink className='text-primary font-semibold' to='/signin'> Create new account </NavLink>
+                        </div>
+
+                        {/* <div className='text-secondary fon-bold'>
+                           <p onClick={()=> forget ( {...register("email")})}> Foreget password?</p>
+                       </div> */}
+
                         <div className="divider">OR</div>
 
                         {/* sign in with google */}
                         <div className="card-actions justify-end">
-                            <button  onClick={() => signInWithGoogle()} className="btn btn-accent text-white font-bold w-full"> Create with Google </button>
+                            <button onClick={() => signInWithGoogle()} className="btn btn-accent text-white font-bold w-full"> Create with Google </button>
                         </div>
                         {/* sign with google end here */}
                     </div>

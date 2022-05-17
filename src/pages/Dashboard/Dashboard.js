@@ -14,17 +14,23 @@ const Dashboard = () => {
             <div class="drawer drawer-mobile">
                 <input id="dashboard" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content  ">
+                {/* drawer-content  */}
                     {/* <!-- Page content here --> */}
                     <Outlet></Outlet>        
                     {/* nested routeds content */}
                 </div>
                 <div class="drawer-side">
                     <label for="dashboard" class="drawer-overlay"></label>
-                    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                    <ul class="menu p-2 overflow-y-auto w-80 bg-base-100 text-base-content">
                         {/* <!-- Sidebar content here --> */}
                     <li><Link to="/dashboard"> My Dashboard </Link></li>                     
                     <li><Link to="/dashboard/myhistory"> My History </Link></li>                     
-                    { admins && <li><Link to="/dashboard/Users"> Users</Link></li>   }                  
+                    { admins && 
+                    <>
+                        <li><Link to="/dashboard/Users"> User history </Link></li> 
+                        <li><Link to="/dashboard/doctorsadd"> Add doctors </Link></li> 
+                    </>  
+                     }                  
                     </ul>
                 </div>
             </div>
