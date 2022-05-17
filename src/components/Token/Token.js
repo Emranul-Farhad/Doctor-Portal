@@ -70,7 +70,9 @@ import { useEffect, useState } from "react";
 
 
 const Token = user => {
+
     const [token, setToken] = useState('')
+
     useEffect(() => {
         console.log(user);
         const email = user?.user?.email;
@@ -92,6 +94,7 @@ const Token = user => {
             })
         }
     }, [user])
+    
     return [token]
 }
 

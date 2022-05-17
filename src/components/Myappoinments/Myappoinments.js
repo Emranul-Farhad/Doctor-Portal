@@ -18,7 +18,7 @@ const Myappoinments = () => {
         fetch(`http://localhost:8000/appoinment?appoinmentpattientemail=${user?.email}`,{
             "method" : "GET",
             headers :{
-                'authorization' : `Bearer ${localStorage.getItem("accesstoken")}`
+              'authorization': `Bearer ${localStorage.getItem("accesstoken")}`
             }
         } )
         // pass jwt toke in server side 

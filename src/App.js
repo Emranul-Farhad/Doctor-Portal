@@ -16,6 +16,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Myappoinments from './components/Myappoinments/Myappoinments';
 import Myhistory from './components/Myhistory/Myhistory';
 import Alluser from './components/All User/Alluser';
+import Requireadmin from './components/All User/AdminHook/Require admin/Requireadmin';
 
 
 
@@ -35,7 +36,7 @@ function App() {
         <Route path='/dashboard' element={<Require><Dashboard></Dashboard></Require> } >
           <Route index element={<Myappoinments></Myappoinments>} ></Route>
           <Route path='myhistory' element={<Myhistory></Myhistory>} ></Route>
-          <Route path='Users' element={<Alluser></Alluser>}></Route>
+          <Route path='Users' element={<Requireadmin><Alluser></Alluser></Requireadmin>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>} ></Route>
       </Routes> 

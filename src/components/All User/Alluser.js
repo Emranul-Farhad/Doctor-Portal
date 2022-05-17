@@ -11,7 +11,7 @@ const Alluser = () => {
         fetch('http://localhost:8000/user', {
             method: "GET",
             headers: {
-                'authorization': ` Bearer ${localStorage.getItem("accesstoken")} `
+               'authorization': `Bearer ${localStorage.getItem("accesstoken")}`
             }
         })
         
@@ -24,6 +24,7 @@ const Alluser = () => {
         return <Loader></Loader>
     }
 
+
     const makeadmin = (email)=> {
         const url = `http://localhost:8000/user/admin/${email}`
         console.log(url);
@@ -33,11 +34,18 @@ const Alluser = () => {
           'authorization' : `Bearer ${localStorage.getItem("accesstoken")}`  
          }
      })
-     .then(res => res.json())
+     .then(res =>{
+         if(res.status === 403){
+             toast.error("you cannot make admin")
+         }
+       return res.json()})
      .then(data => {
-        toast.success("successfully adedded")
-        refetch()
-        console.log ("from all", data)})
+         if(data.modifiedCount > 0){
+            toast.success("successfully adedded")
+            refetch()
+            console.log ("from all", data)
+         }
+    })
     }         
     // const makeadmin = email => {
     //     const url = `http://localhost:8000/user/admin/${email}`
