@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 
 const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
 
-    const { img, categorey, name, education, _id, designation, department, hospital, slots } = modaldetails
+    const { img, categorey, name, education, _id, designation, department, hospital, slots, price } = modaldetails
 
 
     const takingdates = format(dateforappoinments, "PP")
@@ -20,6 +20,7 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
         event.preventDefault();
         const userappointmnettakingform = {
             treatmentid: _id,
+            price: price,
             doctorcategorey: categorey,
             appointmentDate: takingdates,
             appoinmentslot: event.target.slot.value,
@@ -31,6 +32,7 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
         fetch('http://localhost:8000/appoinments', {
             method: 'POST', // or 'PUT'
             headers: {
+                
              'Content-Type': 'application/json',
             },
             body: JSON.stringify(userappointmnettakingform),
@@ -80,6 +82,7 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
                             <h2 className='text-center text-2xl font-bold text-secondary' > {categorey}</h2>
                             <h3 className='text-center text-1xl font-bold text-accent mt-1' > ({designation}) </h3>
                             <h3 className='text-center text-1xl font-bold text-accent mt-2 mb-1' >  {name} </h3>
+                            <h3 className='text-center text-1xl font-bold text-accent mt-2 mb-1' > service fee ৳{price} </h3>
                             {/* <h3 className='text-center  text-accent font-bold mb-5' > {format(dateforappoinments, 'PP',)} </h3> */}
 
                             {/* date taking from react day picker */}

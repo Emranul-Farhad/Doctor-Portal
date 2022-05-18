@@ -18,6 +18,9 @@ import Myhistory from './components/Myhistory/Myhistory';
 import Alluser from './components/All User/Alluser';
 import Requireadmin from './components/All User/AdminHook/Require admin/Requireadmin';
 import Adddoctor from './components/Dashboard doctor components/Adddoctor';
+import Doctormanage from './components/Doctor manage/Doctormanage';
+import Payment from './components/Payment/Payment';
+// import Doctormanage from './components/Doctor manage/Doctormanage';
 
 
 
@@ -35,9 +38,11 @@ function App() {
         <Route path='/signin' element={<Signin></Signin>} ></Route>
         <Route path='/dashboard' element={<Require><Dashboard></Dashboard></Require> } >
           <Route index element={<Myappoinments></Myappoinments>} ></Route>
+          <Route path='Payment/:id'   element={<Payment></Payment>} ></Route>
           <Route path='myhistory' element={<Myhistory></Myhistory>} ></Route>
           <Route path='Users' element={<Requireadmin><Alluser></Alluser></Requireadmin>}></Route>
           <Route path='doctorsadd' element={<Requireadmin><Adddoctor></Adddoctor></Requireadmin>}></Route>
+          <Route path='doctorsmanage' element={<Requireadmin><Doctormanage></Doctormanage></Requireadmin>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>} ></Route>
       </Routes> 

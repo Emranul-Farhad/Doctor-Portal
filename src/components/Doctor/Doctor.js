@@ -51,7 +51,7 @@ const Doctor = ({ doctor}) => {
 				<h6 className="hospital">{hospital}</h6>
 				<div className="text-center">
 					<Link to="/appointment">
-					<button class="text-1xl mt-4 mx-5 btn btn-primary bg-gradient-to-r from-primary to-accent text-white font-bold"> <span className='text-[20px] text-white ' ><AiFillCalendar></AiFillCalendar></span> <span className='mx-2 text-[16px] ' >  Appoinment</span> </button>
+					<button  class="text-1xl mt-4 mx-5 btn btn-primary bg-gradient-to-r from-primary to-accent text-white font-bold"> <span className='text-[20px] text-white ' ><AiFillCalendar></AiFillCalendar></span> <span className='mx-2 text-[16px] ' >  Appoinment</span> </button>
 					</Link>
 				</div>
 			</div>

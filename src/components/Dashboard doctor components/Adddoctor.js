@@ -2,13 +2,14 @@ import { async } from '@firebase/util';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { NavLink } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 
 const Adddoctor = () => {
 
     //    rect form
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     // bbimgagebbbbb key
     const imagekey = '3362cfddeacc2a6837eed7c9e23636a9'
@@ -18,14 +19,14 @@ const Adddoctor = () => {
         console.log(data, "aaa");
         const img = data.image[0]
         const doctorsdetails = {
-                    name: data.name,
-                    education: data.education,
-                    designation: data.designation,
-                    department: data.department,
-                    hospital: data.hospital,
-                    categorey: data.categorey,
-                    img : ""
-                }
+            name: data.name,
+            education: data.education,
+            designation: data.designation,
+            department: data.department,
+            hospital: data.hospital,
+            categorey: data.categorey,
+            img: ""
+        }
         const formData = new FormData();
         formData.append('image', img);
         const url = `https://api.imgbb.com/1/upload?key=${imagekey}`
@@ -38,16 +39,26 @@ const Adddoctor = () => {
                 if (data.success) {
                     const img = data.data.url;
                     doctorsdetails.img = img
-                    console.log(doctorsdetails.name,  doctorsdetails,'doctors detilas');
+                    console.log(doctorsdetails.name, doctorsdetails, 'doctors detilas');
                     fetch("http://localhost:8000/doctors", {
                         method: 'POST', // or 'PUT'
-                        headers: {
-                            'Content-Type': 'application/json',
+                        headers: {                    
+                            'Content-Type': 'application/json' ,
+                            'authorization' : `Bearer ${localStorage.getItem("accesstoken")}`              
                         },
                         body: JSON.stringify(doctorsdetails),
                     })
                         .then(res => res.json())
-                        .then(data => console.log(data, "get from here"))
+                        .then(data => {
+                            if (data.insertedId) {
+                                toast.success('successfully adedded')
+                                reset();
+                            }
+                            else {
+                                toast.error("sorry doctors add failed")
+                            }
+                            console.log(data, "get from here")
+                        })
                 }
 
             })

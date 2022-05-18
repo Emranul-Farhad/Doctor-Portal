@@ -4,7 +4,7 @@ import {AiFillCalendar} from 'react-icons/ai'
 
 
 const Availableappoinment = ({availabledoctor, modals }) => {
-    const { img, categorey, name, education, designation, department, hospital,slots } = availabledoctor
+    const { img, categorey, name, education, designation, department, hospital,slots,price } = availabledoctor
     const [ descriptionCollapse, setDescriptionCollapse ] = useState(true);
 
 	const showMore = () => {
@@ -27,6 +27,7 @@ const Availableappoinment = ({availabledoctor, modals }) => {
 			
 			<div className="doctor-description">
 				<p className="doctor-category">{categorey}</p>
+				<p className="doctor-category mb-2"> <span className='font-bold text-2xl text-accent '>visit fee ৳</span>{price}</p>
 				<h4 className="doctor-name">{name}</h4>
 
 				<span className="doctor-education">{ descriptionCollapse ? education.substr(0, 80) : education  }</span>
@@ -45,7 +46,7 @@ const Availableappoinment = ({availabledoctor, modals }) => {
 				)
 
              } 
-
+                
 				<h6 className="mt-4">{designation}</h6>
 				<h6 className="department">{department}</h6>
 				<h6 className="hospital">{hospital}</h6>
