@@ -18,7 +18,7 @@ const Appoinment = () => {
                     <h3 className='text-2xl text-primary font-bold text-left mb-2'>Appointment</h3>
                     <h2 className='mb-2 text-3xl text-white text-left '>Make an Appointment Today</h2>
                     <p className='text-white text-left '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente earum ab cupiditate autem accusantium expedita sequi, temporibus, aut illo doloribus quaerat explicabo, assumenda consectetur est vel ad sed maiores doloremque consequatur. Amet consequuntur quibusdam autem, quod maxime qui itaque quaerat.</p>
-                    <button class=" mt-4 mx-5 btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold">Take Appoinment </button>
+                    <button className=" mt-4 mx-5 btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold">Take Appoinment </button>
                 </div>
             </section>
             {/* <Swiper

@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebasekey/Firebasekey';
 import { toast } from 'react-toastify';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigation } from 'react-day-picker';
 
 
 
@@ -12,6 +14,8 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
 
     const { img, categorey, name, education, _id, designation, department, hospital, slots, price } = modaldetails
 
+    // navigate
+    const navigate = useNavigate()
 
     const takingdates = format(dateforappoinments, "PP")
 
@@ -43,6 +47,8 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
                 console.log('Success:', data);
                 if(data.success){
                     toast(`appoinment setted in ${takingdates} at${event.target.slot.value} `)
+                     
+
                 }
                 else{
                     toast.error(`already setted in ${data?.userappointmnettakingform.appointmentDate} at ${data?.userappointmnettakingform.appoinmentslot}`)
@@ -93,7 +99,7 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
                                 value={format(dateforappoinments, 'PP',)} disabled
                             />
 
-                            <select name='slot' class="select select-info w-full">
+                            <select name='slot' className="select select-info w-full">
                                 {
                                     slots.map(slot => <option value={slot} > {slot} </option>)
                                 }
@@ -119,7 +125,9 @@ const Mymodal = ({ modaldetails, dateforappoinments, refetch  }) => {
                                 </select>
                             </div>
                             <textarea className='input input-bordered input-info mt-10' name="problem" id="" cols="60" rows="21"></textarea>
-                            <input class=" mt-4 mx-5 btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold" type="submit" submit />
+                            {/* <input className=" mt-4 mx-5 btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold" type="submit" submit /> */}
+                             <input className=" mt-4 mx-5 btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold" type="submit" submit /> 
+                            
                         </form>
                     </div>
                 </div>
